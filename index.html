@@ -1,11 +1,303 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1>hello</h1>
+<!doctype html>
+<html data-theme="light">
+  <head>
+    <meta charset="UTF-8"  />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.24/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <!-- google-font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+          font-family: 'Poppins', sans-serif;
+        }
+      </style>
+  </head>
+  <body class="bg-slate-100 pt-10 px-16 ">
+
+         <!-- navbar -->
+     <div class="navbar bg-white  flex justify-between px-6 rounded-md" >
+        <div class="flex gap-3 ">
+            <img src="./assets/logo.png" alt="">
+            <h1 class="text-2xl">Dev<span class="font-bold ">Board</span></h1>
+        </div>
+        <div class="flex-none gap-7">
+            <div class="flex gap-5 bg-slate-100 p-2 items-center rounded-full">
+                <div class="">
+                <img src="./assets/checkbox.png" alt="">
+                </div>
+                <p class="text-2xl font-bold" id="completed">23</p>
+            </div>
+            <div class="">
+                <div tabindex="0" role="button" class="btn btn-ghost btn-circle avatar bg-slate-100" id="colorBtn">
+                <div class="w-8 rounded-full">
+                    <img src="./assets/theme-btn.png" alt="">
+                </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <!-- navbar ends --> 
+
+
+    <!-- main section -->
+     <div class="grid grid-cols-4  mt-5 gap-4  rounded-md">
+        <div class="col-span-3 bg-white p-6 rounded-md">
+            <div class="bg-white grid grid-cols-4 gap-4 mb-10">
+                <div class="flex gap-3 items-center bg-slate-100 rounded-md p-6">
+                    <div class="bg-white rounded-full w-12 h-12 flex items-center justify-center"><img src="./assets/checkbox.png" alt="" class="w-2/3"></div>
+                    <div>
+                        <p >Task assigned</p>
+                        <h1 class="font-extrabold text-2xl" id="task-assigned">06</h1>
+                    </div>
+                </div>
+
+                <div class="col-span-2 bg-blue-400 text-white text-xl flex gap-3 items-center rounded-md p-6 cursor-pointer" id="discover-btn">
+                    <div><img src="./assets/board.png" alt=""></div>
+                    <p> Discover Something New Today</p>
+                </div>
+
+                <div class="flex gap-3 items-center bg-slate-100 rounded-md px-3">
+                    <div class="bg-white rounded-full w-12 h-12 flex items-center justify-center"><img src="./assets/calender.png" alt="" class="w-2/3"></div>
+                    <p id="current-date">date</p>
+                </div> 
+            </div>
+
+            <div class=" grid grid-cols-3 gap-4" id="task-container">
+                <!-- 1 -->
+                <div class="bg-slate-100  p-6 rounded-md card-item">
+                    <span class="bg-white p-2 rounded-md">ShopEase</span>
+                    <h1 class="my-4 text-xl font-bold card-title">Fix Mobile Button Issue </h1>
+                    <p class="bg-white p-3 rounded-md text-black text-opacity-50" id="task1">
+                        Debug using Chrome DevTools, check for overlapping elements, and ensure onClick works properly.
+                      </p>
+                      
+                    
+                    <div class="flex justify-between mt-5">
+                        <div>
+                            <p class="text-black text-opacity-50">Deadline</p>
+                            <p>21 March 2025</p>
+                        </div>
+                        <div>
+                            <button class="btn bg-blue-600 text-white complete-btn">
+                                Completed
+                            </button>
+                        </div>
+                    </div>
+                        
+                </div>
+                
+                <div class="bg-slate-100  p-6 rounded-md card-item">
+                    <span class="bg-white p-2 rounded-md">CloudSync</span>
+                    <h1 class="my-4 text-xl font-bold card-title">Add Dark Mode</h1>
+                    <p class="bg-white p-3 rounded-md text-black text-opacity-50" >Store the user's preference in localStorage, update CSS variables dynamically, and apply a smooth transition effect.</p>
+                    
+                    <div class="flex justify-between mt-5">
+                        <div>
+                            <p class="text-black text-opacity-50">Deadline</p>
+                            <p>21 March 2025</p>
+                        </div>
+                        <div>
+                            <button class="btn bg-blue-600 text-white complete-btn">
+                                Completed
+                            </button>
+                        </div>
+                    </div>
+                        
+                </div>
+
+                <div class="bg-slate-100  p-6 rounded-md card-item">
+                    <span class="bg-white p-2 rounded-md">SwiftPay</span>
+                    <h1 class="my-4 text-xl font-bold card-title">Optimize  Home page  </h1>
+                    <p class="bg-white p-3 rounded-md text-black text-opacity-50">Debug using Chrome DevTools, check for overlapping elements, and ensure onClick works properly</p>
+                    
+                    <div class="flex justify-between mt-5">
+                        <div>
+                            <p class="text-black text-opacity-50">Deadline</p>
+                            <p>21 March 2025</p>
+                        </div>
+                        <div>
+                            <button class="btn bg-blue-600 text-white complete-btn">
+                                Completed
+                            </button>
+                        </div>
+                    </div>
+                        
+                </div>
+
+                <div class="bg-slate-100  p-6 rounded-md card-item">
+                    <span class="bg-white p-2 rounded-md">Meta</span>
+                    <h1 class="my-4 text-xl font-bold card-title">Add new emoji 🤲</h1>
+                    <p class="bg-white p-3 rounded-md text-black text-opacity-50">Debug using Chrome DevTools, check for overlapping elements, and ensure onClick works properly
+                        and ensure onClick works properly</p>
+                    
+                    <div class="flex justify-between mt-5">
+                        <div>
+                            <p class="text-black text-opacity-50">Deadline</p>
+                            <p>21 March 2025</p>
+                        </div>
+                        <div>
+                            <button class="btn bg-blue-600 text-white complete-btn">
+                                Completed
+                            </button>
+                        </div>
+                    </div>
+                        
+                </div>
+
+                <div class="bg-slate-100  p-6 rounded-md card-item">
+                    <span class="bg-white p-2 rounded-md">Google LLC</span>
+                    <h1 class="my-4 text-xl font-bold card-title">Integrate OpenAI API </h1>
+                    <p class="bg-white p-3 rounded-md text-black text-opacity-50">Debug using Chrome DevTools, check for overlapping elements, and ensure onClick works properly and ensure onClick works properly</p>
+                    
+                    <div class="flex justify-between mt-5">
+                        <div>
+                            <p class="text-black text-opacity-50">Deadline</p>
+                            <p>21 March 2025</p>
+                        </div>
+                        <div>
+                            <button class="btn bg-blue-600 text-white complete-btn">
+                                Completed
+                            </button>
+                        </div>
+                    </div>
+                        
+                </div>
+
+
+                <div class="bg-slate-100  p-6 rounded-md card-item">
+                    <span class="bg-white p-2 rounded-md">Glassdoar</span>
+                    <h1 class="my-4 text-xl font-bold card-title">Improve Job searching </h1>
+                    <p class="bg-white p-3 rounded-md text-black text-opacity-50">Debug using Chrome DevTools, check for overlapping elements, and ensure onClick works properly and ensure onClick works properly</p>
+                    
+                    <div class="flex justify-between mt-5">
+                        <div>
+                            <p class="text-black text-opacity-50">Deadline</p>
+                            <p>21 March 2025</p>
+                        </div>
+                        <div>
+                            <button class="btn bg-blue-600 text-white complete-btn">
+                                Completed
+                            </button>
+                        </div>
+                    </div>
+                        
+                </div>
+
+
+            </div>
+        </div>
+        <!-- left -->
+        <div class=" bg-white rounded-md p-6" >
+            <div class="flex gap-5 items-center justify-center">
+                <div>
+                    <img src="./assets/activity.png" alt="">
+                </div>
+                <p>Activity Log</p>
+            </div>
+            <div class="flex justify-center mt-5">
+                <button class="btn bg-blue-600 text-white" id="clear-history">
+                    CLear History
+                </button>
+            </div>
+
+            <div id="description">
+
+            </div>
+            
+            </div>
+
+            
+            
+        
+     </div>
+      
+     <script>
+        //nav-color-changer
+        document.getElementById("colorBtn").addEventListener("click", function() {
+        let red = Math.floor(Math.random() * 256);
+        let green = Math.floor(Math.random() * 256);
+        let blue = Math.floor(Math.random() * 256);
+        let opacity = Math.random().toFixed(2);
+
+        let randomColor = `rgba(${red}, ${green}, ${blue}, ${opacity})`;
+        document.body.style.backgroundColor = randomColor;
+});
+
+
+        //right-side
+        let currentDate=document.getElementById('current-date');
+        const today=new Date();
+        // console.log(today.toDateString());
+        currentDate.innerText=today.toDateString();
+
+        // left
+        let taskCompleted=0;
+        let cardContainer=document.getElementById("task-container");
+        cardContainer.addEventListener('click',function(event){
+            if(event.target.classList.contains('complete-btn')){
+                alert("Board updated successfully");
+                taskCompleted+=1;
+                if(taskCompleted===6){
+                    alert("Congrats! You have completed all the current tasks.")
+                }
+                //get card item
+                let cardItem=event.target.closest('.card-item');
+                // console.log(cardItem)
+
+                let taskTitle=cardItem.querySelector(".card-title").innerText;
+                // console.log(taskTitle)
+
+                //date
+                let date = new Date();
+                var time=date.toLocaleTimeString();
+
+                let history=document.querySelector("#description");
+                //create Element
+                let newElement=document.createElement('p');
+                newElement.innerText="You have completed the task "+taskTitle+" at "+ time;
+                newElement.classList.add('bg-slate-100', 'rounded-md','p-3', 'my-3')
+                
+                history.appendChild(newElement)
+                event.target.disabled="true";
+
+
+                //Completed Tasks updated
+                tasksCompleted=document.getElementById("completed");
+                convertedTasksCompleted=parseInt(tasksCompleted.innerText);
+                updatedTaskCompletedNo=convertedTasksCompleted+1;
+                tasksCompleted.innerText=updatedTaskCompletedNo;
+                
+
+
+
+
+                ///Assigned task updated
+                tasksAssigned=document.getElementById("task-assigned");
+                convertedTask=parseInt(tasksAssigned.innerText);
+                updatedTaskNo=convertedTask-1;
+                tasksAssigned.innerText="0"+updatedTaskNo;
+                
+
+                
+            }
+        })
+
+
+        //clear-history
+        document.getElementById("clear-history").addEventListener('click',function(){
+            document.querySelector("#description").innerHTML='';
+        })
+
+
+        //redirect
+        document.getElementById("discover-btn").addEventListener('click',function(){
+            window.location.href="questions.html";
+        })
+
+     </script>
+   
 </body>
 </html>

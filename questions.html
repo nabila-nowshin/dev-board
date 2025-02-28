@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.24/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <!-- google-font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+          font-family: 'Poppins', sans-serif;
+        }
+      </style>
+
+</head>
+<body class="bg-slate-100 pt-10 px-16 ">
+    <!-- navbar -->
+    <div class="navbar bg-white  flex justify-between px-6 rounded-md" >
+        <div class="flex gap-3 ">
+            <img src="./assets/logo.png" alt="">
+            <h1 class="text-2xl">Dev<span class="font-bold ">Board</span></h1>
+        </div>
+        <button class="btn bg-blue-600 text-white" id="Back-desk">
+            Back To Desk
+        </button>
+    </div>
+
+    <p class="my-5 text-2xl text-center">Blog</p>
+
+    
+      </div>
+
+    <script>
+        //redirect
+        document.getElementById("Back-desk").addEventListener('click',function(){
+            window.location.href="index.html";
+        })
+    </script>
+</body>
+</html>
