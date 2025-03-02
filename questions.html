@@ -12,6 +12,7 @@
     <style>
         body {
           font-family: 'Poppins', sans-serif;
+          
         }
       </style>
 
@@ -28,10 +29,85 @@
         </button>
     </div>
 
-    <p class="my-5 text-2xl text-center">Blog</p>
+    <p class="my-5 text-2xl text-center font-bold">Blog</p>
 
+
+    <div class="ques-items-container">
+        <div class="ques-item bg-white rounded-md mb-6">
+            <p class="font-bold p-6 border-b-2 border-dotted">Question-1: What are the different ways to select an element in the DOM?</p>
+            <p class="">
+                <ul class="list-disc list-inside space-y-2 p-4">
+                    <li>
+                        document.getElementById("id")
+                    </li>
+                    <li>
+                        document.getElementsByClassName("class")
+                    </li>
+                    <li>
+                        document.getElementsByTagName("tag")
+                    </li>
+                    <li>
+                        document.querySelector("selector")
+                    </li>
+                    <li>
+                        document.querySelectorAll("selector")
+                    </li>
+                </ul>
+            </p>
+        </div>
     
-      </div>
+        <div class="ques-item bg-white rounded-md mb-6">
+            <p class="font-bold p-6 border-b-2 border-dotted">Question-2: What is the difference between innerHTML, innerText, and textContent ?</p>
+
+            <p class="">
+                <ul class="list-disc list-inside space-y-2 p-4">
+                <li>
+                    innerHTML</code> - Gets or sets <span class="font-medium">HTML & text</span>(includes tags).
+                </li>
+                <li>
+                    innerText</code> - Gets or sets <span class="font-medium">visible text only.</span>
+                </li>
+                <li>
+                    textContent</code> - Gets or sets <span class="font-medium">all text</span> (including hidden content).
+                </ul>
+            </p>
+        </div>
+
+        <div class="ques-item bg-white rounded-md mb-6">
+            <p class="font-bold p-6 border-b-2 border-dotted">Question-3: What is event delegation in the DOM?</p>
+            <p class="p-4">
+                Event delegation is a technique where single event listener is attached to a parent element 
+        instead of adding listeners to multiple child elements.  
+        The event bubbles up from the child, allowing the parent to handle it.
+            </p>
+        </div>
+
+
+        <div class="ques-item bg-white rounded-md mb-6">
+            <p class="font-bold p-6 border-b-2 border-dotted">Question-4: What is event bubbling in the DOM?</p>
+            <p class="p-4">Event bubbling is a mechanism that allows events to propagate up the Document Object Model (DOM) tree. It's a fundamental concept in event propagation. </p>
+        </div>
+
+
+        <div class="ques-item bg-white rounded-md mb-6">
+            <p class="font-bold p-6 border-b-2 border-dotted">Question-5: How do you create, add, and remove elements using JavaScript?</p>
+            <p class="">
+                <ul class="list-disc list-inside space-y-2 p-4">
+                    <li>
+                        Create an element : document.createElement("tag")
+                    </li>
+                    <li>
+                        Adds an element : parent.appendChild(element)
+                    </li>
+
+                    <li>
+                        Removes an element:element.remove()
+                    </li>
+                </ul>
+            </p>
+        </div>
+    </div>
+    
 
     <script>
         //redirect
