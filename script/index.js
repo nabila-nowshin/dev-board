@@ -82,5 +82,5 @@ document.getElementById("colorBtn").addEventListener("click", function() {
 
     //redirect
     document.getElementById("discover-btn").addEventListener('click',function(){
-        window.location.href="./questions.html";
+        window.location.href="questions.html";
     })
